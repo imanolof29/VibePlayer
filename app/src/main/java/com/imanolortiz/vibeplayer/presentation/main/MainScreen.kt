@@ -20,7 +20,6 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun MainScreenRoot() {
-
     var state by remember { mutableStateOf<ScanningState<List<String>>>(ScanningState.Scanning) }
 
     LaunchedEffect(Unit) {
