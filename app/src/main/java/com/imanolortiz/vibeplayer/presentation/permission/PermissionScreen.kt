@@ -21,12 +21,16 @@ import com.imanolortiz.vibeplayer.R
 import com.imanolortiz.vibeplayer.ui.components.button.VibePlayerButton
 
 @Composable
-fun PermissionScreen() {
-    PermissionScreenRoot()
+fun PermissionScreenRoot(
+    navigateToMain: () -> Unit
+) {
+    PermissionScreen(navigateToMain)
 }
 
 @Composable
-fun PermissionScreenRoot() {
+fun PermissionScreen(
+    navigateToMain: () -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -61,7 +65,7 @@ fun PermissionScreenRoot() {
         }
         VibePlayerButton(
             text = "Allow Access",
-            onClick = {}
+            onClick = navigateToMain
         )
     }
 }

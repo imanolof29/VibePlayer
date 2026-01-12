@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.imanolortiz.vibeplayer.presentation.permission.PermissionScreen
 import com.imanolortiz.vibeplayer.ui.theme.VibePlayerTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +12,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             VibePlayerTheme {
-                PermissionScreen()
+                VibePlayerNavigation()
             }
         }
     }
